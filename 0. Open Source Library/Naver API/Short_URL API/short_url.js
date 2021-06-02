@@ -8,8 +8,8 @@ var start = 1;
 Utils.APItest = function(url){
     try{
         var data = org.jsoup.Jsoup.connect("https://openapi.naver.com/v1/util/shorturl")
-        .header("X-Naver-Client-Id", "6O64RXVXr04F311bXhBU")
-        .header("X-Naver-Client-Secret", "izy9h3IUGN")
+        .header("X-Naver-Client-Id", "클라이언트 ID")
+        .header("X-Naver-Client-Secret", "클라이언트 시크릿")
         .data("url", url)
         .ignoreContentType(true)
         .get()
