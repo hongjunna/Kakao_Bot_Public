@@ -1,3 +1,8 @@
+
+
+//반드시 Readme.md 파일을 읽고 사용해 주세요! 제에에발 ㅠㅠ
+
+
 const scriptName = "papago";
 var start = 1;
 Utils.APItest = function(fromlang, tolang, value){
