@@ -24,15 +24,10 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
     var cmd = msg.split("/")[0];
     var data = msg.replace(cmd + "/", "");
     if(cmd == "!번역") {
-        replier.reply(data);
         var data2 = data.split("/");
-        replier.reply(data2);
         var fromlang = data2[0];
-        replier.reply(fromlang);
         var tolang = data2[1];
-        replier.reply(tolang);
         var value = data.replace(fromlang + "/" + tolang + "/", "");
-        replier.reply(value);
         var result = Utils.APItest(fromlang, tolang, value);
         if(result == null) replier.reply("번역에 실패했습니다.");
         else replier.reply(result)
