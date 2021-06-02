@@ -1,0 +1,4 @@
+Test Bot/
+*.html
+/**/*test.js
+/**/*.log
