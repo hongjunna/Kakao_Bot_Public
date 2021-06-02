@@ -1,16 +1,10 @@
-//변수들
-const scriptName = "test";
-const return_log = "log";
-const return_errorlog = "error_log";
-const admin = "HJ";
+const scriptName = "papago";
 var start = 1;
-
-//명령어 리스트
 Utils.APItest = function(fromlang, tolang, value){
     try{
         var data = org.jsoup.Jsoup.connect("https://openapi.naver.com/v1/papago/n2mt")
-        .header("X-Naver-Client-Id", "6O64RXVXr04F311bXhBU")
-        .header("X-Naver-Client-Secret", "izy9h3IUGN")
+        .header("X-Naver-Client-Id", "본인의 ID")
+        .header("X-Naver-Client-Secret", "본인의 코드")
         .data("source", fromlang)
         .data("target", tolang)
         .data("text", value)
@@ -21,7 +15,6 @@ Utils.APItest = function(fromlang, tolang, value){
         return null;
     }
 }
-//메인스크립트
 function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) {
     var cmd = msg.split("/")[0];
     var data = msg.replace(cmd + "/", "");
@@ -39,7 +32,4 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
         if(result == null) replier.reply("번역에 실패했습니다.");
         else replier.reply(result)
     }
-}
-//시작 시 실행하는 스크립트
-function onStart(activity) {
 }
